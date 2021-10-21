@@ -1,0 +1,21 @@
+1. Connect with your VPN of choice if you are working from a remote connection or from outside 
+of the network that your HPC cluser exists on.
+
+2. Simply ssh into your HPC
+    a. This will typically place on a login node, which is a low resource space where you can do
+       some light testing and typicall submit jobs to a WLM (workload manager), like Slurm.
+
+    b. Example: ssh <your username>@<your domain name or network IP>
+                ssh tsb31@h2p.crc.pitt.edu
+
+3. Note that you have entered into a secure shell connection with your HPC cluster
+    a. Note that we are on a Linux-based system, for many HPC environments this will be
+       RedHat Enterprise Linux
+
+    b. Note any network attached storage that you/your group has access to.
+
+    c. Note our .bashrc file and how we can modify this to do configure some basic settings
+       and elements that we would like to run whenever we log in.
+
+    d. Note the module system and how it will let us search for and install software that our
+       HPC admins have approved.

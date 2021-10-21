@@ -1,0 +1,23 @@
+Let's got ahead and install this repo from GitHub to our HPC login node!
+
+1. First, let's check and see if your HPC has git as loadable module:
+
+module spider git
+
+2. Now, let's load the git module:
+
+module load git
+
+3. Check that git has been properly loaded by checking the version:
+
+git --version
+
+4. Go to your home directory and make a GitHub folder:
+
+cd ~
+mkdir GitHub
+cd GitHube
+
+5. Finally, clone (install) the repo:
+
+git clone https://github.com/tshanebuckley/HPC-Basics.git
