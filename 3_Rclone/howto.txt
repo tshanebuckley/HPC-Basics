@@ -31,3 +31,16 @@ and access remote and cloud resources from a local machine. Lets try it out.
    h. Paste in the shared result and hit enter.
 
    g. 
+
+5. Mount your data:
+
+   a. Make a directory to mount your data to:
+      mkdir mnt
+
+   b. Mount your data:
+      rclone mount sharepoint:/Documents mnt --daemon --vfs-cache-mode full
+
+   c. Look around your mounted just like it was on your filesystem!
+
+   d. To unmount:
+      fusermount -u mnt   
