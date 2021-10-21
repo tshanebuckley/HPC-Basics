@@ -1,0 +1,33 @@
+What is rclone? Well, it's basically a peice of software that is designed to allow you to connect to, manage, 
+and access remote and cloud resources from a local machine. Lets try it out.
+
+1. Make sure our HPC has rclone as a module (think back to our git example).
+
+2. Load rclone.
+
+3. Make sure rclone loaded.
+
+4. Now we can configure rclone. It actually has a nice cli (command line interface) that mostly walks you
+   through setting up a remote resource. 
+
+   Use the command "rclone config" to get started.
+   We will now go through setting up a new remote, using SharePoint as our example.
+
+   a. Type 'n' for 'new remote' and hit enter
+
+   b. Name your remote 'sharepoint'
+
+   c. Type '23' for OneDrive and hit enter.
+
+   d. Hit enter twice to skip through 'client_id' and 'client_secret' settings.
+
+   e. Hit enter one more time to skip 'advanced config'
+
+   f. Type 'n' and hit enter to skip autoconfig (since we are on a remote machine).
+
+   g. Your guide should now show you how to get your result for setting up your remote connection
+      and share said result for finishing up the connection.
+
+   h. Paste in the shared result and hit enter.
+
+   g. 

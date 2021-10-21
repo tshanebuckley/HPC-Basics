@@ -1,0 +1,125 @@
+Please start this section with the following command:
+cd ~
+
+Lets go over some basic Linux commands and ideas:
+
+For starters, think of a file system as a giant tree and the root start /
+
+1. Try this command and see what your see:
+
+ls /
+
+What we are seeing here is te root of our tree. All file paths in our system start here.
+An absolute path is a path that starts from the root of our tree and goes all the way to our 
+file or directory that we are interested in.
+
+We can actually see our absolute path with the following command (in case we ever get lost):
+
+pwd
+
+2. Now that we know where we are, let's see what's around us:
+
+As you have probably already seen, we do this with the ls command
+
+Try these following commands:
+
+    a. ls
+       This lets us see what files exist in current directory
+
+    b. ls ..
+       This lets us see everything in the directory above the one we are in, you can
+       go closer back to the root by chanining these (../../.. etc).
+
+    c. ls ~
+       This lets us see what is in our home directory
+
+3. Okay, we can look around, now lets move around:
+
+    a. cd ..
+       Will take us up one directory.
+
+    b. cd ~
+       Will take us back to our home directory
+
+    c. cd GitHub 
+       Should take us to the GitHub directory we created (since we should be in ~)
+
+4. Now we can create, copy, read, and move stuff:
+
+    a. Lets go to our folder for this section of the training
+       cd HPC-Basics/2_FileSystem
+
+    b. Take a look around using ls and cd for a bit.
+
+    c. Lets make a friend for fileA in dir1/dirA called fileB:
+       cd dir1/dirA
+       touch fileB
+
+    d. Lets see what each of them have to say:
+       cat fileA
+       cat fileB
+
+    e. Lets give fileB something to say:
+       echo "Hello from fileB!" > fileB
+       cat fileB
+
+    f. Lets actually inspect fileB
+       nano fileB
+
+    g. Lets go back to echo for a second. Think of echo as a print statement for bash.
+       Lets look at our home directory! (HOME is an example of an environment variable)
+       echo $HOME
+
+    h. Lets go hang out with dir2 for a bit, it's next to dir1. Find your way there.
+
+    i. Looks like dir2 is missing file1, lets fix that:
+       cp ../dir1/file1 .
+
+       Note that cp is the copy command, it lets us copy files and directories.
+       Usage cp <path to item to copy> <path for where to copy it to>
+
+    j. What if I want to copy a whole directory:
+       cp -r ../dir1 .
+
+       Note the -r flag here. This is the "recursive" flag, meaning to apply the command over
+       a folder. This is a pretty common standard.
+
+    k. I don't think I want file1 here any more.
+       rm file1
+
+       Note that rm is the "delete" option.
+
+    l. I don't want a full copy of dir1 either
+       rm -r dir1
+
+    m. But I think I want fileB here now:
+       mv ../dir1/dirA/fileB .
+       ls
+       ls ../dir1/dirA
+
+       Note that mv is the move option and we can check that our file has been moved using ls.
+
+5. Okay, what about some light scripting:
+
+    a. Make sure that you are back in the 2_FileSystem directory.
+
+    b. Lets make a new directory for our scripts:
+       mkdir animals
+
+       Note that mkdir...well...makes directories.
+
+    c. Lets make a new friend and give em a voice:
+       touch dog
+       echo "Bark bork bark" > dog
+       cat dog
+
+    d. Lets have give our new friend some independence:
+       nano dog
+       Add this line to the top of your script: #!/bin/bash
+
+       This line of code is actually called a shebang and makes our script runnable.
+
+    e. Let the dog run:
+       ./dog
+
+    f. Try making a cat script
