@@ -30,7 +30,11 @@ and access remote and cloud resources from a local machine. Lets try it out.
 
    h. Paste in the shared result and hit enter.
 
-   g. 
+   i. Find your sharepoint instance and configure it.
+
+   j. Finalize your set up.
+
+   k. Type 'q' and hit enter to exit rclone config
 
 5. Mount your data:
 
@@ -38,7 +42,7 @@ and access remote and cloud resources from a local machine. Lets try it out.
       mkdir mnt
 
    b. Mount your data:
-      rclone mount sharepoint:/Documents mnt --daemon --vfs-cache-mode full
+      rclone mount sharepoint:/ mnt --daemon --vfs-cache-mode full
 
    c. Look around your mounted just like it was on your filesystem!
 
