@@ -113,6 +113,9 @@ Try these following commands:
        echo "Bark bork bark" > dog
        cat dog
 
+       Note that we may need to use chmod to make our script executable:
+       chmod 775 dog
+
     d. Lets have give our new friend some independence:
        nano dog
        Add this line to the top of your script: #!/bin/bash

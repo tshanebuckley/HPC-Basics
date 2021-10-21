@@ -1,0 +1,28 @@
+First, lets load R as we have done for git and rclone.
+
+Note that loading R requires loading a gcc compiler first:
+
+module load gcc
+--then--
+module load r
+
+Secondly, lets take a look at our r script and disect it a bit.
+
+Lets make our job submission script executable:
+
+chmod 775 slurm_submit.R
+
+Note that chmod lets us change the read/write permissions of a file along with letting
+us make is executable.
+
+Lets add our shebang to our script:
+
+Use the command "which Rscript" and past the results at the top of our file with the leading '#!'.
+
+Lastly, lets run it!
+
+You can see your jobs using the command: squeue -u $USER
+
+After our job is finished running, lets check out our log file.
+
+Congrats! You just ran your first job using Slurm!
