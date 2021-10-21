@@ -16,7 +16,7 @@ git --version
 
 cd ~
 mkdir GitHub
-cd GitHube
+cd GitHub
 
 5. Finally, clone (install) the repo:
 
