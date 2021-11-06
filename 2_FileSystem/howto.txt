@@ -60,11 +60,12 @@ Try these following commands:
        cat fileB
 
     e. Lets give fileB something to say:
-       echo "Hello from fileB!" > fileB
+       echo "Hello from fileB" > fileB
        cat fileB
 
     f. Lets actually inspect fileB
        nano fileB
+       (While we're here, let's add our punctuation to our hello line...add a '!')
 
     g. Lets go back to echo for a second. Think of echo as a print statement for bash.
        Lets look at our home directory! (HOME is an example of an environment variable)
